@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>link</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fhd.css" media="screen and (min-width:1350px)">
+<link rel="stylesheet" href="css/hd.css" media="screen and (min-width:1050px) and (max-width:1349px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:660px) and (max-width:1049px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:659px)">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var scroll = $(document).scrollTop();
+        var navHeight = $('header').outerHeight();
+
+        $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+
+            if(scrolled > navHeight) {
+                $('header').addClass('animate');
+            }else {
+                $('header').removeClass('animate');
+            }
+
+            if(scrolled > scroll) {
+                $('header').removeClass('sticky');
+            }else {
+                $('header').addClass('sticky');
+            }
+
+            scroll = $(document).scrollTop();
+        });
+
+        $('.main-menu li').mouseover(function(){
+            $(this).find('.sub-menu').stop().slideDown();
+        });
+        $('.main-menu li').mouseout(function(){
+            $(this).find('.sub-menu').stop().slideUp();
+        });
+
+        ScrollReveal().reveal('.linkbox', {
+            duration:2000
+        });
+        
+        $(window).scroll(function(){
+           if($(this).scrollTop() > 40){
+               $('#topBtn').fadeIn();
+           }else {
+               $('#topBtn').fadeOut();
+           }
+        });
+        
+        $('#topBtn').click(function(){
+           $('html, body').animate({scrollTop : 0}, 300); 
+        });
+    });
+</script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1><strong>C</strong>LINKER</h1></a>
+        <nav>
+            <input type="checkbox" id="menu-icon">
+            <label for="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="main-menu">
+                <li>
+                    <div class="drawer-logo">
+                        <span data="C">C</span>
+                        <span data="L">L</span>
+                        <span data="I">I</span>
+                        <span data="N">N</span>
+                        <span data="K">K</span>
+                        <span data="E">E</span>
+                        <span data="R">R</span>
+                    </div>
+                </li>
+                <li><a href="introduce.html">INTRO</a></li>
+                <li><a href="gallery.html">GALLERY</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">2019</a></li>
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                    </ul>
+                </li>
+                <li><a href="ranking.html">RANKING</a></li>
+                <li><a href="link.html">LINK</a></li>
+            </ul>
+
+            <ul class="side-menu">
+                <li><div></div></li>
+                <li><div></div></li>
+                <li>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </li>
+                <li><p>Copyright&copy;2020<br>CLINKER All Rights Reserved.</p></li>
+            </ul>
+        </nav>
+        <ul class="top-menu">
+                <li><a href="#"><i class="material-icons">person_add_alt_1</i><span>LOG IN</span></a></li>
+                <li><a href="#"><i class="material-icons">login</i><span>JOIN</span></a></li>
+        </ul>
+    </header>
+    <div class="clear"></div>
+	
+	<section>
+		<div class="lk-bn"><h2>Link</h2></div>
+        <div class="clear"></div>
+        
+        <article>
+            <h3>Music Festival <strong>Link</strong></h3>
+            <h4>뮤직페스티벌 링크</h4>
+            <div class="clear"></div>
+            
+            <button id="topBtn"><i class="material-icons">arrow_circle_up</i></button>
+
+            <div class="search-box">
+                <input type="text" name="search" placeholder="입력"> 
+                <a href="#"><i class="fa fa-search"></i></a>
+            </div>
+            <div class="clear"></div>
+
+			<ul class="linkbox">
+                <li><img src="images/link-poster1.jpg" alt="뮤직"></li>
+                <li><a href="#">워터밤</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster2.jpg" alt="뮤직"></li>
+                <li><a href="#">무로 뮤직페스티벌</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster3.jpg" alt="뮤직"></li>
+                <li><a href="#">EDC KOREA</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster4.jpg" alt="뮤직"></li>
+                <li><a href="#">뮤직 페스타</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+
+            <ul class="linkbox">
+                <li><img src="images/link-poster1.jpg" alt="뮤직"></li>
+                <li><a href="#">워터밤</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster2.jpg" alt="뮤직"></li>
+                <li><a href="#">무로 뮤직페스티벌</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster3.jpg" alt="뮤직"></li>
+                <li><a href="#">EDC KOREA</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster4.jpg" alt="뮤직"></li>
+                <li><a href="#">뮤직 페스타</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+
+            <ul class="linkbox">
+                <li><img src="images/link-poster1.jpg" alt="뮤직"></li>
+                <li><a href="#">워터밤</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster2.jpg" alt="뮤직"></li>
+                <li><a href="#">무로 뮤직페스티벌</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster3.jpg" alt="뮤직"></li>
+                <li><a href="#">EDC KOREA</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+            </ul>
+            <ul class="linkbox">
+                <li><img src="images/link-poster4.jpg" alt="뮤직"></li>
+                <li><a href="#">뮤직 페스타</a></li>
+                <li><a href="#"><img src="images/link-icon.png" alt="링크"></a></li>	
+                <li>난지한강공원</li>
+				<li>2019.05.16 ~ 2019.05.21</li>
+			</ul>
+			
+			<div class="clear"></div>
+
+            <div class="manager-btn">
+                <button><a href="#">등록</a></button>
+                <button><a href="#">삭제</a></button>
+            </div>
+        </article>
+	</section>
+	<div class="clear"></div>
+	
+	<footer>
+        <div class="ft-wrap">
+            <a href="Main.html"><h1>CLINKER</h1></a>
+            <p>
+                서울시 용산구 청파로 20길 95<br>
+                TEL. 070-7567-4039&nbsp;&nbsp;&nbsp;&nbsp;FAX. 02-553-0829
+            </p>
+            <p>Copyright&copy;2020 CLINKER All Rights Reserved.</p>
+            <ul class="sns">
+                <li><a class="btn" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

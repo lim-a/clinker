@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranking</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css"  href="css/lightslider.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fhd.css" media="screen and (min-width:1350px)">
+<link rel="stylesheet" href="css/hd.css" media="screen and (min-width:1051px) and (max-width:1349px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:660px) and (max-width:1050px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:659px)">
+<script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+<script type="text/javascript" src="js/lightslider.js"></script>
+<script>
+    $(document).ready(function() {
+        var scroll = $(document).scrollTop();
+        var navHeight = $('header').outerHeight();
+
+        $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+
+            if(scrolled > navHeight) {
+                $('header').addClass('animate');
+            }else {
+                $('header').removeClass('animate');
+            }
+
+            if(scrolled > scroll) {
+                $('header').removeClass('sticky');
+            }else {
+                $('header').addClass('sticky');
+            }
+
+            scroll = $(document).scrollTop();
+        });
+
+        $('.main-menu li').mouseover(function(){
+            $(this).find('.sub-menu').stop().slideDown();
+        });
+        $('.main-menu li').mouseout(function(){
+            $(this).find('.sub-menu').stop().slideUp();
+        });
+
+        $('#autoWidth').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth').removeClass('cS-hidden');
+            } 
+        });
+        
+        $(window).scroll(function(){
+           if($(this).scrollTop() > 40){
+               $('#topBtn').fadeIn();
+           }else {
+               $('#topBtn').fadeOut();
+           }
+        });
+        
+        $('#topBtn').click(function(){
+           $('html, body').animate({scrollTop : 0}, 300); 
+        });
+    });
+</script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1><strong>C</strong>LINKER</h1></a>
+        <nav>
+            <input type="checkbox" id="menu-icon">
+            <label for="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="main-menu">
+                <li>
+                    <div class="drawer-logo">
+                        <span data="C">C</span>
+                        <span data="L">L</span>
+                        <span data="I">I</span>
+                        <span data="N">N</span>
+                        <span data="K">K</span>
+                        <span data="E">E</span>
+                        <span data="R">R</span>
+                    </div>
+                </li>
+                <li><a href="introduce.html">INTRO</a></li>
+                <li><a href="gallery.html">GALLERY</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">2019</a></li>
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                    </ul>
+                </li>
+                <li><a href="ranking.html">RANKING</a></li>
+                <li><a href="link.html">LINK</a></li>
+            </ul>
+
+            <ul class="side-menu">
+                <li><div></div></li>
+                <li><div></div></li>
+                <li>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </li>
+                <li><p>Copyright&copy;2020<br>CLINKER All Rights Reserved.</p></li>
+            </ul>
+        </nav>
+        <ul class="top-menu">
+                <li><a href="#"><i class="material-icons">person_add_alt_1</i><span>LOG IN</span></a></li>
+                <li><a href="#"><i class="material-icons">login</i><span>JOIN</span></a></li>
+        </ul>
+    </header>
+    <div class="clear"></div>
+  
+    <section>
+        <div class="ra-bn"><h2>Ranking</h2></div>
+        <div class="clear"></div>
+      
+        <article>
+            <h3>Music Festival <strong>Ranking</strong></h3>
+            <h4>뮤직페스티벌 랭킹</h4>
+            <div class="clear"></div>
+
+            <button id="topBtn"><i class="material-icons">arrow_circle_up</i></button>
+            
+            <div class="ra-container">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="ra-box">
+                            <div id="num1"></div>
+                            <a href="https://korea.electricdaisycarnival.com"target="_blank">
+                                <img src="images/ra-poster1.jpg"class="card-img">
+                            </a>
+                            <ul class="ra-details">
+                                <li>EDC KOREA 2019</li>
+                                <li>2019.08.31 ~ 2019.09.01</li>
+                                <li>올림픽공원</li>
+                            </ul>                     
+                        </div>
+                    </li>
+
+                    <li class="item-a">
+                        <div class="ra-box">
+                            <div id="num2"></div>
+                            <a href="http://www.seouljazz.co.kr/" target="_blank">
+                                <img src="images/ra-poster2.jpg" class="card-img">
+                            </a>
+                             <ul class="ra-details">
+                                 <li>SEOUL JAZZ FESTIVAL</li>
+                                 <li>2019.08.31 ~ 2019.09.01</li>
+                                 <li>서울랜드</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="item-a">
+                        <div class="ra-box">
+                            <div id="num3"></div>
+                            <a href="https://ultrakorea.com/ko/" target="_blank">
+                                <img src="images/ra-poster3.jpg" class="card-img">
+                            </a>                  
+                            <ul class="ra-details">
+                                <li>ULTRA KOREA</li>
+                                <li>2019.08.31 ~ 2019.09.01</li>
+                                <li>잠실종합운동장</li>
+                            </ul>                     
+                        </div>
+                    </li>
+
+                    <li class="item-a">
+                        <div class="ra-box">
+                            <div id="num4"></div>
+                            <a href="http://bluespringfestival.com/" target="_blank">
+                                <img src="images/ra-poster4.jpg" class="card-img">
+                            </a>
+                            <ul class="ra-details">
+                                <li>SEOUL MUSIC FESTIVAL</li>
+                                <li>2019.08.31 ~ 2019.09.01</li>
+                                <li>올림픽공원</li>
+                            </ul>   
+                        </div>
+                    </li>
+
+                    <li class="item-a">
+                        <div class="ra-box">
+                            <div id="num5"></div>
+                            <a href="http://spectrumdmf.com/" target="_blank">
+                                <img src="images/ra-poster5.jpg" class="card-img">
+                            </a>
+                            <ul class="ra-details">
+                                <li class="box-title">SPECTRUM KOREA</li>
+                                <li>2019.08.31 ~ 2019.09.01</li>
+                                <li>올림픽공원</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="clear"></div>
+
+        <div class="ra-text">
+            <p>뮤직 페스티벌 랭킹의 집계 기준은 2019년 한 해 동안의 <strong>멜론 티켓, 인터파크 티켓, 하나 티켓</strong> 온라인 예매(PC/모바일/글로벌)의 입금완료된 예매건만 반영됩니다.</p>
+            <p>또한 판매매수기준으로 일간판매 80% + 주간판매 20%로 집계되어 랭킹데이터에 반영됩니다. 행사 당일 웹예매, 전화예매, 제휴사 예매, 예매자별 월간 4매까지 반영하여 알려드립니다.</p>
+            <p>※ 랭킹 집계 기간 : 2019.01.01(화) ~ 2019.12.31(화)</p>
+        </div>
+    </section>
+   
+    <footer>
+        <div class="ft-wrap">
+            <a href="Main.html"><h1>CLINKER</h1></a>
+            <p>
+               서울시 용산구 청파로 20길 95<br>
+               TEL. 070-7567-4039&nbsp;&nbsp;&nbsp;&nbsp;FAX. 02-553-0829
+            </p>
+            <p>Copyright&copy;2020 CLINKER All Rights Reserved.</p>
+            <ul class="sns">
+                <li><a class="btn" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

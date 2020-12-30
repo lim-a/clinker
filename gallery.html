@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/viewbox.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fhd.css" media="screen and (min-width:1350px)">
+<link rel="stylesheet" href="css/hd.css" media="screen and (min-width:1050px) and (max-width:1349px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:660px) and (max-width:1049px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:659px)">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.viewbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var scroll = $(document).scrollTop();
+        var navHeight = $('header').outerHeight();
+
+        $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+
+            if(scrolled > navHeight) {
+                $('header').addClass('animate');
+            }else {
+                $('header').removeClass('animate');
+            }
+
+            if(scrolled > scroll) {
+                $('header').removeClass('sticky');
+            }else {
+                $('header').addClass('sticky');
+            }
+
+            scroll = $(document).scrollTop();
+        });
+
+        $('.main-menu li').mouseover(function(){
+            $(this).find('.sub-menu').stop().slideDown();
+        });
+        $('.main-menu li').mouseout(function(){
+            $(this).find('.sub-menu').stop().slideUp();
+        });
+
+        $('.flexslider').flexslider({animation:"slide"});
+        $('a.image-link').viewbox();
+
+        ScrollReveal().reveal('.gal-wrap li', {
+            duration:2000
+        });
+        
+        $(window).scroll(function(){
+           if($(this).scrollTop() > 40){
+               $('#topBtn').fadeIn();
+           }else {
+               $('#topBtn').fadeOut();
+           }
+        });
+        
+        $('#topBtn').click(function(){
+           $('html, body').animate({scrollTop : 0}, 300); 
+        });
+    });
+</script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1><strong>C</strong>LINKER</h1></a>
+        <nav>
+            <input type="checkbox" id="menu-icon">
+            <label for="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="main-menu">
+                <li>
+                    <div class="drawer-logo">
+                        <span data="C">C</span>
+                        <span data="L">L</span>
+                        <span data="I">I</span>
+                        <span data="N">N</span>
+                        <span data="K">K</span>
+                        <span data="E">E</span>
+                        <span data="R">R</span>
+                    </div>
+                </li>
+                <li><a href="introduce.html">INTRO</a></li>
+                <li><a href="gallery.html">GALLERY</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">2019</a></li>
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                    </ul>
+                </li>
+                <li><a href="ranking.html">RANKING</a></li>
+                <li><a href="link.html">LINK</a></li>
+            </ul>
+
+            <ul class="side-menu">
+                <li><div></div></li>
+                <li><div></div></li>
+                <li>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </li>
+                <li><p>Copyright&copy;2020<br>CLINKER All Rights Reserved.</p></li>
+            </ul>
+        </nav>
+        <ul class="top-menu">
+                <li><a href="#"><i class="material-icons">person_add_alt_1</i><span>LOG IN</span></a></li>
+                <li><a href="#"><i class="material-icons">login</i><span>JOIN</span></a></li>
+        </ul>
+    </header>
+    <div class="clear"></div>
+	
+	<section>
+        <div class="gal-bn"><h2>Gallery</h2></div>
+        <div class="clear"></div>
+
+        <article>
+            <h3>Music Festival <strong>Gallery</strong></h3>
+            <h4>뮤직페스티벌 갤러리</h4>
+            <div class="clear"></div>
+            
+            <button id="topBtn"><i class="material-icons">arrow_circle_up</i></button>
+
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><a href="#"><img src="images/i1.jpg" alt="이미지1"></a></li>
+                    <li><a href="#"><img src="images/i2.jpg" alt="이미지2"></a></li>
+                    <li><a href="#"><img src="images/i3.jpg" alt="이미지3"></a></li>
+                    <li><a href="#"><img src="images/i5.jpg" alt="이미지4"></a></li>
+                    <li><a href="#"><img src="images/i6.jpg" alt="이미지5"></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+
+            <div class="gal-wrap">
+                <ul class="gal-top">
+                    <li>
+                        <ul class="gal-top-left">
+                            <li><a href="images/i1.jpg" class="image-link"></a></li>
+                            <li><a href="images/i2.jpg" class="image-link"></a></li>
+                            <li><a href="images/i3.jpg" class="image-link"></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="gal-top-right">
+                            <li><a href="images/i4.jpg" class="image-link"></a></li>
+                            <li><a href="images/i5.jpg" class="image-link"></a></li>
+                            <li><a href="images/i6.jpg" class="image-link"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="gal-middle">
+                    <li><a href="images/i7.jpg" class="image-link"></a></li>
+                    <li><a href="images/i8.jpg" class="image-link"></a></li>
+                    <li><a href="images/i9.jpg" class="image-link"></a></li>
+                </ul>
+
+                <ul class="gal-bottom">
+                    <li>
+                        <ul class="gal-bottom-left">
+                            <li><a href="images/i10.jpg" class="image-link"></a></li>
+                            <li><a href="images/i11.jpg" class="image-link"></a></li>
+                            <li><a href="images/i12.jpg" class="image-link"></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="gal-bottom-right">
+                            <li><a href="images/i13.jpg" class="image-link"></a></li>
+                            <li><a href="images/i14.jpg" class="image-link"></a></li>
+                            <li><a href="images/i15.jpg" class="image-link"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </article>
+	</section>
+	<div class="clear"></div>
+    
+	<footer>
+        <div class="ft-wrap">
+            <a href="Main.html"><h1>CLINKER</h1></a>
+            <p>
+                서울시 용산구 청파로 20길 95<br>
+                TEL. 070-7567-4039&nbsp;&nbsp;&nbsp;&nbsp;FAX. 02-553-0829
+            </p>
+            <p>Copyright&copy;2020 CLINKER All Rights Reserved.</p>
+            <ul class="sns">
+                <li><a class="btn" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduce</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fhd.css" media="screen and (min-width:1350px)">
+<link rel="stylesheet" href="css/hd.css" media="screen and (min-width:1050px) and (max-width:1349px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:660px) and (max-width:1049px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:659px)">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    $(document).ready(function(){
+        window.sr = ScrollReveal();
+
+        sr.reveal('.in-tb-bg h6', {
+            origin:'top',
+            duration:2000,
+            distance:'3rem',
+            delay:300
+        });
+        sr.reveal('.in-pic-top h5', {
+            origin:'left',
+            duration:2000,
+            distance:'10rem',
+            delay:300
+        });
+        sr.reveal('.in-pic-top h6', {
+            origin:'left',
+            duration:2000,
+            distance:'10rem',
+            delay:300
+        });
+        sr.reveal('.in-pic-top div', {
+            origin:'right',
+            duration:2000,
+            distance:'25rem',
+            delay:500
+        });
+        sr.reveal('.in-pic-bottom div', {
+            origin:'left',
+            duration:2000,
+            distance:'25rem',
+            delay:300
+        });
+        sr.reveal('.in-pic-bottom p', {
+            origin:'right',
+            duration:2000,
+            distance:'5rem',
+            delay:300
+        });
+        sr.reveal('.in-fes h5', {
+            origin:'top',
+            duration:2000,
+            distance:'5rem',
+            delay:300
+        });
+        sr.reveal('.in-fes h6', {
+            origin:'top',
+            duration:2000,
+            distance:'5rem',
+            delay:300
+        });
+        sr.reveal('.in-btn', {
+            origin:'top',
+            duration:2000,
+            distance:'5rem',
+            delay:300
+        });
+        sr.reveal('.in-fes-text', {
+            origin:'bottom',
+            duration:2000,
+            distance:'5rem',
+            delay:300
+        });
+
+        var scroll = $(document).scrollTop();
+        var navHeight = $('header').outerHeight();
+
+        $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+
+            if(scrolled > navHeight) {
+                $('header').addClass('animate');
+            }else {
+                $('header').removeClass('animate');
+            }
+
+            if(scrolled > scroll) {
+                $('header').removeClass('sticky');
+            }else {
+                $('header').addClass('sticky');
+            }
+
+            scroll = $(document).scrollTop();
+        });
+
+        $('.main-menu li').mouseover(function(){
+            $(this).find('.sub-menu').stop().slideDown();
+        });
+        $('.main-menu li').mouseout(function(){
+            $(this).find('.sub-menu').stop().slideUp();
+        });
+
+        $(window).scroll(function(){
+           if($(this).scrollTop() > 40){
+               $('#topBtn').fadeIn();
+           }else {
+               $('#topBtn').fadeOut();
+           }
+        });
+        
+        $('#topBtn').click(function(){
+           $('html, body').animate({scrollTop : 0}, 300); 
+        });
+    });
+</script>
+</head>
+    
+<body>
+    <header>
+        <a href="index.html"><h1><strong>C</strong>LINKER</h1></a>
+        <nav>
+            <input type="checkbox" id="menu-icon">
+            <label for="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="main-menu">
+                <li>
+                    <div class="drawer-logo">
+                        <span data="C">C</span>
+                        <span data="L">L</span>
+                        <span data="I">I</span>
+                        <span data="N">N</span>
+                        <span data="K">K</span>
+                        <span data="E">E</span>
+                        <span data="R">R</span>
+                    </div>
+                </li>
+                <li><a href="introduce.html">INTRO</a></li>
+                <li><a href="gallery.html">GALLERY</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">2019</a></li>
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                    </ul>
+                </li>
+                <li><a href="ranking.html">RANKING</a></li>
+                <li><a href="link.html">LINK</a></li>
+            </ul>
+
+            <ul class="side-menu">
+                <li><div></div></li>
+                <li><div></div></li>
+                <li>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </li>
+                <li><p>Copyright&copy;2020<br>CLINKER All Rights Reserved.</p></li>
+            </ul>
+        </nav>
+        <ul class="top-menu">
+                <li><a href="#"><i class="material-icons">person_add_alt_1</i><span>LOG IN</span></a></li>
+                <li><a href="#"><i class="material-icons">login</i><span>JOIN</span></a></li>
+        </ul>
+    </header>
+    <div class="clear"></div>
+	
+	<section>
+		<div class="in-bn"><h2>Introduce</h2></div>        
+        
+        <button id="topBtn"><i class="material-icons">arrow_circle_up</i></button>
+        
+        <div class="in-tb-bg">
+            <article>
+                <div></div>
+                <h5>Make <strong>Timetable</strong></h5>
+                <h6>내가 만드는 시간표</h6>
+                <p>뮤직페스티벌은 <strong>다양한 아티스트</strong>들의 공연으로 이루어져 있습니다. 보고싶은 공연을 모아 새로운 <strong>시간표를 만들어</strong> 보세요.</p>
+            </article>
+        </div>
+        <div class="clear"></div>
+		
+        <article>
+            <div class="in-pic-top">
+                <h5>Enjoy <strong>Picnic</strong></h5>
+                <h6>즐거운 피크닉</h6>   
+                <div></div>
+            </div>
+        
+            <div class="in-pic-bottom">
+                <div></div>
+                <p>페스티벌에서 피크닉을 빼놓을 수 없죠! 친구, 가족들과 공연 사이에 <strong>즐거운 피크닉 타임</strong>을 가지세요.</p>
+            </div>
+        </article>
+        <div class="clear"></div>
+        
+        <div class="in-fes">
+            <h5>Enjoy Music Festival!</h5>
+            <h6>페스티벌을 즐기는 법</h6>
+            <a href="#" class="in-btn in-fes-btn">Click Here!</a>
+        </div>
+        
+        <p class="in-fes-text">
+            <strong>다양한 이벤트</strong>와 프로그램, <strong>다채로운 즐길거리</strong>가 함께합니다. 열렬한 음악 팬이 아니어도 가벼운 마음으로 찾을 수 있습니다. 나에게 맞는 공연을 찾아 <strong>나만의 콘서트</strong>를 즐겨보세요!
+        </p>
+        
+	</section>
+    <div class="clear"></div>
+	
+	<footer>
+        <div class="ft-wrap">
+            <a href="Main.html"><h1>CLINKER</h1></a>
+            <p>
+                서울시 용산구 청파로 20길 95<br>
+                TEL. 070-7567-4039&nbsp;&nbsp;&nbsp;&nbsp;FAX. 02-553-0829
+            </p>
+            <p>Copyright&copy;2020 CLINKER All Rights Reserved.</p>
+            <ul class="sns">
+                <li><a class="btn" href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a class="btn" href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

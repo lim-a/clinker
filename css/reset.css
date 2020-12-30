@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@font-face { 
+   font-family: clinker;
+   src:url("../fonts/MASQUE_.eot"); 
+   src:local(''), url("../fonts/MASQUE_.woff") format("woff");
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body { font-family:'Noto Sans KR', sans-serif; font-size:16px; }
+
+section { overflow:hidden; }
+
+footer { background:#803A7A; color:#E8E8E8; }
+
+h1 { font-family:'clinker'; font-size:34px; color:#FFF; }
+
+h2, h3, h4, h5 { font-family:'DM Serif Display', serif; }
+
+h2 { color:rgba(255,255,255,0.7); text-align:center; }
+
+h3, h5 { color:#803A7A; }
+
+h4, h6 { font-family:'Noto Sans KR', sans-serif; }
+
+ul li, ol li { float:left; list-style:none; }
+
+strong { color:#E37D1B; }
+
+img { display:block; }
+
+a {
+   display:block;
+   text-decoration:none;
+   border:none;
+   outline:none;
+}
+
+.clear { clear:both; }
+
+#topBtn {
+    display:none;
+    position:fixed; bottom:40px; right:40px; width:50px; height:50px;
+    background:none;
+    border:none; outline:none;
+    cursor:pointer; z-index:999;
+}
+#topBtn i { font-size:50px; color:#FFCE00; }
